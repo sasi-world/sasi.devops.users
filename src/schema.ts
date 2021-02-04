@@ -5,11 +5,12 @@ type Socials {
      url: String
 }
 type User {
-     ID: String
-     name: String
-     suname: String
-     email: String
-     type: String
+     ID: String!
+     username: String!
+     name: String!
+     suname: String!
+     email: String!
+     type: String!
      socialAcounts: [Socials]
 }
 
