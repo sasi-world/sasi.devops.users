@@ -20,6 +20,7 @@ A hello world Query
 type Query {
      hello: String!
      getAUser(ID:String!): User
+     getUsers: [User]!
 }
 
 `;
