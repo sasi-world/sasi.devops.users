@@ -1,4 +1,4 @@
-const schema = `
+const schema: String = `
 
 type User {
      ID: String
