@@ -1,3 +1,7 @@
 export const hello = (args: any, context: any) => {
-    return "Your GraphQL API is now LIVE!🎈 "
-}
+  return "Your GraphQL API is now LIVE!🎈 ";
+};
+
+export const getUsers = (args: any, context: any) => {
+  return null;
+};
