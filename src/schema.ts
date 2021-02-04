@@ -1,4 +1,4 @@
-const schema: String = `
+const schema: string = `
 
 type Socials {
      name: String
