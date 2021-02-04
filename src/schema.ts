@@ -19,6 +19,7 @@ A hello world Query
 """
 type Query {
      hello: String!
+     getAUser(ID:String!): User
 }
 
 `;
