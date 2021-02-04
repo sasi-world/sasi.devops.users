@@ -1,12 +1,12 @@
-import AWS from "aws-sdk";
+import * as AWS from "aws-sdk";
 
-const client = new AWS.DynamoDB.DocumentClient({ region: "us-east-1" });
+const client: any = new AWS.DynamoDB.DocumentClient({ region: "us-east-1" });
 
 export default {
-  get: (params) => client.get(params).promise(),
-  put: (params) => client.put(params).promise(),
-  query: (params) => client.query(params).promise(),
-  update: (params) => client.update(params).promise(),
-  delete: (params) => client.delete(params).promise(),
-  scan: (params) => client.scan(params).promise(),
+  get: (params: object) => client.get(params).promise(),
+  put: (params: object) => client.put(params).promise(),
+  query: (params: object) => client.query(params).promise(),
+  update: (params: object) => client.update(params).promise(),
+  delete: (params: object) => client.delete(params).promise(),
+  scan: (params: object) => client.scan(params).promise(),
 };
