@@ -1,0 +1,20 @@
+Resources:
+  UsersDB:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ${self:custom.UsersDB}
+      AttributeDefinitions:
+        - AttributeName: ID
+          AttributeType: S
+        - AttributeName: username
+          AttributeType: S
+
+      KeySchema:
+        - AttributeName: ID
+          KeyType: HASH
+        - AttributeName: username
+          KeyType: RANGE
+      # Set the capacity based on the stage
+      ProvisionedThroughput:
+        ReadCapacityUnits: ${self:custom.tableThroughput}
+        WriteCapacityUnits: ${self:custom.tableThroughput}
