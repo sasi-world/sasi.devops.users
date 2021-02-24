@@ -21,7 +21,8 @@ export const getAUser = async (args: any, context: any) => {
   };
   try {
     const users = await dynamoDB.default.scan(params);
-    return users.Items;
+    const user = users.Items.filter((user) => user.ID === args.ID);
+    return user[0];
   } catch (e) {
     throw new Error(e);
   }
