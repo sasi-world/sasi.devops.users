@@ -8,10 +8,10 @@ type User {
      ID: String!
      username: String!
      name: String!
-     suname: String!
+     surname: String!
      email: String!
      type: String!
-     socialAcounts: [Socials]
+     socialAccounts: [Socials]
 }
 
 """
