@@ -11,7 +11,7 @@ type User {
      suname: String!
      email: String!
      type: String!
-     socialAcounts: [Socials]
+     socialAccounts: [Socials]
 }
 
 """
