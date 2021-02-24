@@ -9,6 +9,7 @@ export const getUsers = async (args: any, context: any) => {
   };
   try {
     const users = await dynamoDB.default.scan(params);
+    return users.Items;
   } catch (e) {
     throw new Error(e);
   }
